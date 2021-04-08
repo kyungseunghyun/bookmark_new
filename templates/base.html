@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- static css 직접 작성한 코드 -->
+    {% load static %}
+    <link rel="styleshee" href="{% static 'style.css' %}">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Django Bookmark</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportendContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-quto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">home
+                    <span class="sr-only">(current)</span> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <p></p>
+        <div class="row">
+            <div class="col">
+    {% block content %}
+    {% endblock %}
+                </div>
+            </div>
+</body>
+</html>
